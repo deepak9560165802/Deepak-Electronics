@@ -4,6 +4,25 @@ let displayText = "";
 let charIndex = 0;
 let deleting = false;
 
+let nav = document.querySelector(".nav");
+let cross = document.querySelector("#cross");
+let menu = document.querySelector("#menu");
+
+//event listener to menu hamburger feature
+
+menu.addEventListener("click",()=>{
+    nav.style.left = "0%";
+    cross.style.display = "block";
+})
+
+cross.addEventListener("click",()=>{
+    nav.style.left = "100%";
+    cross.style.display = "none";
+})
+
+
+
+
 function animateText() {
     if (!deleting) {
         displayText = texts[index].slice(0, charIndex);
