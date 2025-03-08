@@ -28,6 +28,10 @@ body {
     background-size: cover;
 }
 
+#menu{
+    display: none;
+}
+
 .nav {
     padding: 5px 20px 10px 20px;
     display: flex;
@@ -88,7 +92,7 @@ span {
 }
 
 .front-img {
-    width: 600px;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -229,14 +233,29 @@ footer {
     margin-left: 20px;
 }
 
+#cross{
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
 #footer_ul a{
     color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .nav {
-        flex-direction: column;
-        text-align: center;
+      position: absolute;
+      left: 110%;
+      transition: all 1s ease-in-out;
+    }
+
+    .second , .img-container{
+        display: none;
+    }
+
+    #menu{
+        display: block;
     }
 
     .nav ul {
